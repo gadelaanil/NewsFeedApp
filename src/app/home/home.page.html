@@ -1,0 +1,30 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>News Feed</ion-title>
+  </ion-toolbar> </ion-header>
+
+ <ion-content color="light">
+    <div class="spin" *ngIf="spinner == false">
+      <ion-spinner name="bubbles"></ion-spinner>
+  </div>
+   <ion-list class="ios list-ios hydrated"  *ngIf="spinner == true" inset>
+    <ion-item *ngFor="let newsData of NewsInfo">
+        <ion-thumbnail slot="start" class="ios hydrated">
+          <img [src]=newsData.urlToImage>
+        </ion-thumbnail>
+        <ion-label>
+          <h2 class="tittle" style="cursor:pointer" (click)="viewInfo(newsData)">{{newsData.title}}</h2>
+          <h3>Author : {{newsData.author}}</h3>
+          <div class="multiline">
+            {{newsData.content}}
+            
+        </div>
+        <div class="show-more" (click)="viewInfo(newsData)" style="cursor:pointer" >
+          <a>Show more</a>
+      </div>
+        <p>{{newsData.publishedAt | date :  "dd-MM-y"}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  

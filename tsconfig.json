@@ -1,0 +1,48 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+// {
+//   "compileOnSave": false,
+//   "compilerOptions": {
+//     "baseUrl": "./",
+//     "outDir": "./dist/out-tsc",
+//     "sourceMap": true,
+//     "declaration": false,
+//     "downlevelIteration": true,
+//     "experimentalDecorators": true,
+//     "moduleResolution": "node",
+//     "importHelpers": true,
+//     "target": "es2015",
+//     "module": "esnext", // add this line
+//     "lib": ["es2018", "dom"]
+//   },
+//   "angularCompilerOptions": {
+//     "enableI18nLegacyMessageIdFormat": false,
+//     "strictInjectionParameters": true,
+//     "strictInputAccessModifiers": true,
+//     "strictTemplates": true
+//   }
+// }
+
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "esnext", // add this line
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es6",
+      "es2018",
+      "dom"
+    ]
+  }
+}
+

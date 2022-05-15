@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title routerLink="/home" >Back</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card>
+    
+    <ion-card-header>
+      <ion-card-title>{{NewInformation.title}}</ion-card-title>
+    </ion-card-header>
+    <img styel=""[src]=NewInformation.urlToImage/>
+    <p>Author : {{NewInformation.author}}</p>
+    <p>Publish At : {{NewInformation.publishedAt | date :  "dd-MM-y"}}</p>
+    <ion-card-content>
+        <p>{{NewInformation.description}} </p>
+
+        
+     <p class="multiline">
+       <a target="_blank"  [href]=NewInformation.url>Show News</a>
+       {{NewInformation.content}}
+     </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
